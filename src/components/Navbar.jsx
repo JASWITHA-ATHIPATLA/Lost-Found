@@ -34,6 +34,9 @@ const Logo = styled.button`
   border: none;
   background-color: transparent;
   cursor: pointer;
+    @media (max-width:1024px){
+  font-size:19px;
+  }
 `;
 
 const NavActions = styled.div`
