@@ -18,7 +18,6 @@ const NavInner = styled.div`
   margin: 0 auto;
   padding: 0 20px;
   height: 64px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
