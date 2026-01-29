@@ -15,20 +15,6 @@ export const dummyItems = [
     timestamp: '2026-01-20T10:30:00'
   },
   {
-    id: 1,
-    type: 'lost',
-    name: 'iPhone 13 Pro',
-    category: 'Phone',
-    location: 'Main Library, 3rd Floor',
-    date: '2026-01-20',
-    description: 'Lost my blue iPhone 13 Pro with a clear case. Has a small crack on the bottom right corner. Last seen near the study area.',
-    contactName: 'Sarah Johnson',
-    email: 'sarah.j@college.edu',
-    phone: '+1 555-0123',
-    imagePreview: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%234F46E5" width="400" height="300"/%3E%3Ctext x="50%25" y="50%25" font-size="24" fill="white" text-anchor="middle" dominant-baseline="middle"%3EiPhone 13 Pro%3C/text%3E%3C/svg%3E',
-    timestamp: '2026-01-20T10:30:00'
-  },
-  {
     id: 2,
     type: 'found',
     name: 'Black Leather Wallet',
