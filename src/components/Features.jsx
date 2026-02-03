@@ -107,4 +107,4 @@ function Features (){
   )
 }
 
-export default Features
+export default Features;
