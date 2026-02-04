@@ -88,7 +88,7 @@ export const CTAButton = styled.button`
   }
 `;
 
-function Features (){
+function Features ({setCurrentPage}){
   return (<>
   <CTASection>
   <CTAInner>
