@@ -134,7 +134,7 @@ function HomePage({ setCurrentPage, setShowForm, items }) {
         </HeroInner>
         <ItemsPost items={items}/>
         <HowItWorks />
-        <Features/>
+        <Features setCurrentPage={setCurrentPage}/>
         <Footer/>
       </Hero>
     </Container>
