@@ -1,6 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { Phone, Mail, MapPin, Calendar, Tag, Search } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Calendar,
+  Tag,
+  Search,
+  Share2Icon,
+} from "lucide-react";
 
 const ItemsGrid = styled.div`
   display: grid;
@@ -13,7 +21,9 @@ const ItemCard = styled.div`
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
 
   &:hover {
     transform: translateY(-4px);
@@ -115,7 +125,7 @@ const EmptyState = styled.div`
   }
 `;
 
-const ItemCards = ({ items }) => {
+function ItemCards({ items, shareTo }) {
   if (items.length === 0) {
     return (
       <EmptyState>
@@ -124,6 +134,18 @@ const ItemCards = ({ items }) => {
       </EmptyState>
     );
   }
+  function shareTo() {
+  console.log("Share clicked"); // 👀 must appear
+
+  const pageUrl = window.location.href;
+  const shareText = "Help Us To Find Items";
+
+  const whatsappAPI =
+    "https://wa.me/?text=" +
+    encodeURIComponent(`${shareText} ${pageUrl}`);
+
+  window.open(whatsappAPI, "_blank");
+}
 
   return (
     <ItemsGrid>
@@ -146,9 +168,13 @@ const ItemCards = ({ items }) => {
               <MapPin size={14} /> {item.location}
             </p>
             <p>
-              <Calendar size={14} />{" "}
-              {new Date(item.date).toLocaleDateString()}
+              <Calendar size={14} /> {new Date(item.date).toLocaleDateString()}
             </p>
+            <div onClick={()=>shareTo(item)} className="share-btn">
+              <Share2Icon size={14} />
+              <span> Share</span>
+            </div>
+
             <p className="desc">{item.description}</p>
 
             <ContactSection>
@@ -166,6 +192,6 @@ const ItemCards = ({ items }) => {
       ))}
     </ItemsGrid>
   );
-};
+}
 
 export default ItemCards;
