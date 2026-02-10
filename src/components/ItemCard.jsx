@@ -135,7 +135,7 @@ function ItemCards({ items, shareTo }) {
     );
   }
   function shareTo() {
-  console.log("Share clicked"); // 👀 must appear
+  // console.log("Share clicked"); // 👀 must appear
 
   const pageUrl = window.location.href;
   const shareText = "Help Us To Find Items";
