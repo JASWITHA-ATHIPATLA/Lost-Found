@@ -181,7 +181,7 @@ const PostItemForm = ({ formData, setFormData, onSubmit, onClose, categories }) 
           </button>
         </FormHeader>
 
-        <Form onSubmit={onSubmit}>
+        <Form action='/newItemData' method="Post" onSubmit={onSubmit}>
           <FormGrid>
             <FormGroup>
               <label>Type *</label>
